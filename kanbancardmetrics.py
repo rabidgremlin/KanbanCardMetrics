@@ -4,13 +4,14 @@ from pandas import Series, DataFrame, Panel
 
 # This is some ugly ugly code
 
-
+HOLIDAYS = [pd.Timestamp('2016-12-26'), pd.Timestamp('2016-12-27'), pd.Timestamp('2016-12-28'), pd.Timestamp('2016-12-29'), pd.Timestamp('2016-12-30'),
+            pd.Timestamp('2017-01-02'), pd.Timestamp('2017-01-03'), pd.Timestamp('2017-01-04'), pd.Timestamp('2017-01-05'), pd.Timestamp('2017-01-06')]
 
 def calc_days_to_complete(df):
     # from http://stackoverflow.com/a/22819128
     A = [d.date() for d in df['Started']]
     B = [d.date() for d in df['Finished']]
-    df['DaysToComplete'] = np.busday_count(A, B) + 1
+    df['DaysToComplete'] = np.busday_count(A, B, holidays=HOLIDAYS) + 1
 
     # TODO check for negative days to ID bad data
     #print(df)
