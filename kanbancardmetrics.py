@@ -5,7 +5,8 @@ from pandas import Series, DataFrame, Panel
 # This is some ugly ugly code
 
 HOLIDAYS = [pd.Timestamp('2016-12-26'), pd.Timestamp('2016-12-27'), pd.Timestamp('2016-12-28'), pd.Timestamp('2016-12-29'), pd.Timestamp('2016-12-30'),
-            pd.Timestamp('2017-01-02'), pd.Timestamp('2017-01-03'), pd.Timestamp('2017-01-04'), pd.Timestamp('2017-01-05'), pd.Timestamp('2017-01-06')]
+            pd.Timestamp('2017-01-02'), pd.Timestamp('2017-01-03'), pd.Timestamp('2017-01-04'), pd.Timestamp('2017-01-05'), pd.Timestamp('2017-01-06'),
+            pd.Timestamp('2017-01-31'), pd.Timestamp('2017-02-06')]
 
 def calc_days_to_complete(df):
     # from http://stackoverflow.com/a/22819128
