@@ -12,7 +12,10 @@ def calc_days_to_complete(df):
     # from http://stackoverflow.com/a/22819128
     A = [d.date() for d in df['Started']]
     B = [d.date() for d in df['Finished']]
-    df['DaysToComplete'] = np.busday_count(A, B, holidays=HOLIDAYS) + 1
+
+    print(B)
+
+    df['DaysToComplete'] = np.busday_count(A, B) + 1 #, )holidays=HOLIDAYS) + 1
 
     # TODO check for negative days to ID bad data
     #print(df)

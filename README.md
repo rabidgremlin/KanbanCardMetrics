@@ -17,9 +17,7 @@ Spits out average cycle time data and a couple of useful charts (in .pdf format)
 Requires Python 3.5 or greater
 
 ```
-pip install pandas
-pip install numpy
-pip install pip install matplotlib
+pip install -r requirements.txt
 ```
 
 ## Running the script
