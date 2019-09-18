@@ -34,6 +34,7 @@ def generate_cards_complete_by_day_graph(df):
     #df4['7 Day Average'] = pd.rolling_mean(df4['Cards Completed'], 7)
 
     df4['7 Day Average'] = df4['Cards Completed'].rolling(window=7,center=False).mean()
+    df4['30 Day Average'] = df4['Cards Completed'].rolling(window=30,center=False).mean()
 
     print(df4)
 
